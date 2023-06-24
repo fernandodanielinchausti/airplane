@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Test@1234",
-    "database": "express-sequalize-mysql-boilerplate",
-    "host": "127.0.0.1",
+    "username": "bsale_test",
+    "password": "bsale_test",
+    "database": "airline",
+    "host": "mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
