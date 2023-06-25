@@ -1,15 +1,9 @@
 const db = require("../models");
+const { airplaneService } = require("../service");
 
-const getAll = () =>
-  new Promise((resolve, reject) => {
-    db.airplane.findAll()
-      .then((planes) => {
-        resolve(planes);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+const getAll = async () => {
+  return await airplaneService.getAirplane();
+};
 
 module.exports = {
   getAll,

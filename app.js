@@ -17,3 +17,6 @@ app.use('/airplane', accessLog, airplaneRoute);
 app.listen(config.PORT, () => {
   console.log(`Listening at http://localhost:${config.PORT}`);
 });
+
+//Run import models
+//./node_modules/.bin/sequelize-automate -t js -h mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com -d airline -u bsale_test -p bsale_test -o models

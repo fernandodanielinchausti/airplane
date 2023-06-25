@@ -3,14 +3,14 @@ const {
 } = require('sequelize');
 module.exports = sequelize => {
   const attributes = {
-    airplane_id: {
+    seat_type_id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       defaultValue: null,
       primaryKey: true,
       autoIncrement: true,
       comment: "Identificador de la tabla",
-      field: "airplane_id"
+      field: "seat_type_id"
     },
     name: {
       type: DataTypes.STRING(255),
@@ -18,16 +18,15 @@ module.exports = sequelize => {
       defaultValue: null,
       primaryKey: false,
       autoIncrement: false,
-      comment: "Nombre del avión",
+      comment: "Nombre del tipo de asiento",
       field: "name"
     }
   };
   const options = {
-    timestamps: false,
-    tableName: "airplane",
+    tableName: "seat_type",
     comment: "",
     indexes: []
   };
-  const AirplaneModel = sequelize.define("airplane_model", attributes, options);
-  return AirplaneModel;
+  const SeatTypeModel = sequelize.define("seat_type_model", attributes, options);
+  return SeatTypeModel;
 };
